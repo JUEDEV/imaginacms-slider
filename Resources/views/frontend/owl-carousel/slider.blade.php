@@ -6,6 +6,7 @@
 
     <script type="text/javascript">
 	  	$(document).ready(function() {
+			console.warn("slider.leng")
 	        var owl = $('#{{$slider->system_name}}');
 	        owl.owlCarousel({
 	        margin: 10,
