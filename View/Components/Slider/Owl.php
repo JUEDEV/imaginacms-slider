@@ -40,6 +40,7 @@ class Owl extends Component
   public $navPosition;
   public $mouseDrag;
   public $touchDrag;
+  public $animate;
   public $navLateralLeftRight;
   public $navLateralTop;
   public $dotsBottom;
@@ -57,7 +58,7 @@ class Owl extends Component
                               $responsiveClass = false, $responsive = null, $orderClasses = [], $withViewMoreButton = true,
                               $container="container", $stagePadding = 0, $view = null, $itemComponentAttributes = [],
                               $itemComponentNamespace = null, $itemComponent = null, $navPosition = 'lateral',
-                              $mouseDrag = true, $touchDrag = true, $navLateralTop = 50, $navLateralLeftRight = '15px',
+                              $mouseDrag = true, $touchDrag = true, $animate = ["animate__slideInLeft", "animate__slideOutRight"], $navLateralTop = 50, $navLateralLeftRight = '15px',
                               $dotsStyleColor = '#fff', $dotsBottom = 0, $central = false
   )
   {
@@ -92,6 +93,7 @@ class Owl extends Component
     $this->navPosition = $navPosition ?? 'lateral';
     $this->mouseDrag = $mouseDrag;
     $this->touchDrag = $touchDrag;
+    $this->animate = explode(",", $animate);
     $this->navLateralLeftRight = $navLateralLeftRight;
     $this->navLateralTop = explode(",", $navLateralTop);
     $this->dotsBottom = $dotsBottom;
